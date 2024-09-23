@@ -7,10 +7,15 @@ app = Flask(__name__)
 
 # 监控的四台机器的 IP 地址及其 /status 路径
 MONITORED_MACHINES = [
-    "http://172.18.131.2:5000/status",
-    "http://172.18.131.4:5000/status",
-    "http://172.18.131.6:5000/status",
-    "http://172.18.131.8:5000/status"
+    "http://172.18.131.2:7788/status",
+    "http://172.18.131.4:7788/status",
+    "http://172.18.131.6:7788/status",
+    "http://172.18.131.8:7788/status",
+    "http://172.18.131.10:7788/status",
+    "http://172.18.131.12:7788/status",
+    "http://172.18.131.14:7788/status",
+    "http://172.18.131.16:7788/status",
+    "http://172.18.131.18:7788/status"
 ]
 
 @app.route('/')

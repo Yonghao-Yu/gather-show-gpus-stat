@@ -1,6 +1,6 @@
 // index.js
 $(document).ready(function() {
-    let interval = 2000;  // 刷新间隔 30 秒
+    let interval = 10000;  // 刷新间隔 30 秒
 
     // 更新前端页面
     function updateContent(data) {

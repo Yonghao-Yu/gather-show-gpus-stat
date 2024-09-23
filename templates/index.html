@@ -9,37 +9,50 @@
     <script src="{{ url_for('static', filename='jquery-3.7.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='index.js') }}"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f5f5f5;
-        }
-        .loader {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .content {
-            display: none;
-        }
-        .error {
-            color: red;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #eee;
-        }
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                color: #666;
+                font-size: 14px;
+                font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+            }
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+            .content {
+                flex: 1;
+            }
+            .footer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                background-color: rgba(220,220,220,0.5);
+                text-align: center;
+            }
+            .ball-pulse > div {
+                background-color: #163367;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                border: 1px solid #ddd;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            .scrollable {
+                overflow-x: auto;
+            }
     </style>
 </head>
 <body>
