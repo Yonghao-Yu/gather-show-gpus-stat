@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU 监控中心</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='loaders.min.css') }}">
+    <script src="{{ url_for('static', filename='jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .loader {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .content {
+            display: none;
+        }
+        .error {
+            color: red;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="ball-pulse"><div></div><div></div><div></div></div>
+        <p>加载数据中...</p>
+    </div>
+    <div class="content">
+        <h1>GPU 监控中心</h1>
+        <p>最后更新时间: <span id="datetime_str"></span></p>
+
+        <div id="statuses">
+            <!-- 每台机器的 GPU 状态将动态插入这里 -->
+        </div>
+
+        <div id="errors" class="error">
+            <!-- 错误信息将动态插入这里 -->
+        </div>
+    </div>
+</body>
+</html>
