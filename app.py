@@ -30,7 +30,7 @@ def gather_status():
     for url in MONITORED_MACHINES:
         try:
             # 请求 GPU 状态
-            response = requests.get(url, timeout=5)
+            response = requests.get(url, timeout=10)
             if response.status_code == 200:
                 statuses[url] = response.json()  # 解析 JSON 响应
             else:
